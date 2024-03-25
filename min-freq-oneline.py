@@ -1,0 +1,1 @@
+print(min(A:=list(map(lambda x: x[0], X:=[input().split() for _ in range(3)])), key=lambda x: A.count(x)), min(B:=list(map(lambda x: x[1], X)), key=lambda x: B.count(x)))
