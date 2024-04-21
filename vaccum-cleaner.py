@@ -2,8 +2,10 @@ import numpy as np
 
 rows = 5
 cols = 3
+cleaned_rooms = 0
 total_rooms = rows * cols
 matrix = np.random.randint(0, 2, (rows, cols))
+print(matrix)
 
 states = {
     0: 'clean',
@@ -13,10 +15,6 @@ actions = {
     0: 'nothing',
     1: 'cleaning'
 }
-
-cleaned_rooms = 0
-
-print(matrix)
 
 for x in range(matrix.shape[0]):
     for y in range(matrix.shape[1]):
