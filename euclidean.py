@@ -1,23 +1,19 @@
 import numpy as np
 
 def euclidean(p1, p2):
+    assert np.equal(np.shape(p1), np.shape(p2)), 'The points muse have the same dimensions'
     return np.sqrt(
         np.sum(
             np.fromiter(
                 (
                     np.power(
-						np.subtract(
-							p1[i],
-							p2[i]     
-						),
-						2
-					)
-                    for i in np.arange(
-                        np.fmin(
-                            np.shape(p1)[0],
-                            np.shape(p2)[0]
-                        )
+                        np.subtract(
+                            p1[i],
+                            p2[i]
+                        ),
+                        2
                     )
+                    for i in np.arange(np.shape(p1)[0])
                 ),
                 np.float64
             )
